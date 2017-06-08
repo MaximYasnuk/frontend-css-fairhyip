@@ -22,43 +22,233 @@ body {
 }
 h1{
     font-size: 22px;
-    color: #ead4aa;
-    font-family: 'Georgia', sans-serif;
+    color: #c9b18c;
+    font-family: Georgia, sans-serif ;
+    font-style: normal;
     margin-bottom: 20px;
-}
 
+}
 h2{
     font-size: 18px;
-    color: #fff68d;
-    font-family: 'Georgia', sans-serif;
+    color: #ded27a;
+    font-family: Georgia, sans-serif;
     margin-bottom: 1em;
 }
-
+p{
+    font-size: 11px;
+    color: #c0b4aa;
+    line-height: 1.5em;
+}
 
 
 /* Header
 -----------------------------------------------------------------------------*/
 .header {
-    height: 200px;
+    height: 160px;
+    width: 100%;
     position: relative;
+    margin-bottom: 40px;
+}
+/*Logo*/
+.header .logo {
+    position: absolute;
+    left: 20px;
+    bottom: 0;
+}
+.header .logo > img {
+    display: block;
+    height: 92px;
+    width: auto;
+}
+/*Main menu*/
 
+.header .mainmenu {
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 
+.header .menu-list {
+    list-style: none;
+    border-radius: 5px;
+    background-color: #f6f5f4;
+}
 
+.header .menu-item{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: -4px;
+    color: #461500;
+}
+
+.header .menu-item a{
+    display: block;
+    width: 117px;
+    height: 39px;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    line-height: 39px;
+    font-family: Georgia, sans-serif;
+    font-size: 14px;
+}
+
+.header .mainmenu .menu-item.active {
+    background: url(../images/bg_menu-item-active.png) no-repeat center 0;
+}
+
+/*Lang list*/
+
+.header .lang-list {
+    position: absolute;
+    left: 20px;
+    top: 40px;
+}
+.header .lang-item {
+    display: inline-block;
+    position: relative;
+    color: #e8d1a4;
+    margin-right: 16px;
+
+}
+.header .lang-item::before{
+    content: '|';
+    position: absolute;
+    left: -12px;
+    top: -1px;
+}
+.header .lang-item:first-child::before {
+    display: none;
+}
+.header .lang-list a {
+    color: #ffffff;
+}
+.header .lang-item:nth-child(3) {
+    display: none;
+}
+
+.header .lang-item:nth-child(4) {
+    display: none;
+}
+
+/*AUTHORIZATION*/
+
+.header .auth{
+    position: absolute;
+    right: 20px;
+    top: 40px;
+    color: #ffffff;
+}
+.header .auth-link{
+    position: relative;
+    display: inline-block;
+    margin-right: 16px;
+}
+.header .auth-link ::before{
+    content: '|';
+    position: absolute;
+    left: -12px;
+    top: 0;
+    color: #ffffff;
+}
+.header .auth-link:first-child ::before {
+    display: none;
+}
+.header .auth-link a {
+    color: inherit;
+}
+.header .signin a {
+    color: #e8d1a4;
+}
 /* Content
 -----------------------------------------------------------------------------*/
 .content {
+    width: 1000px;
+    margin: auto;
     padding: 0 0 75px;
 }
-
-
-
-
+/* promo */
+.content .promo {
+    box-sizing: border-box;
+    background:
+            url(../images/bg_about.png) no-repeat 56px center ,
+            url(../images/bg_promo.png) repeat 0 0;
+    border-radius: 10px;
+    height: 156px;
+    width: 100%;
+    line-height: 22px;
+    padding:24px 45px 0 146px;
+    margin-bottom: 3em;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 14px;
+    color: #f9da5a;
+}
+/* article */
+.content .article {
+    position: relative;
+    margin-bottom: 3em;
+    padding-left: 145px;
+}
+.content .article:last-child{
+    margin-bottom: 0;
+}
+.article img{
+    display: block;
+    width: 75px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform:translateY(-50%);
+}
 /* Footer
 -----------------------------------------------------------------------------*/
 .footer {
+    box-sizing: border-box;
     width: 1000px;
     margin: -75px auto 0;
     height: 75px;
-
+    padding: 40px 20px 0;
     position: relative;
+    border-top: 1px solid rgba(153, 121, 61, .6);
+}
+.footer a{
+    color: white;
+    text-decoration: none;
+}
+.footer .copyright {
+    position: absolute;
+    display: block;
+    bottom: 20px;
+    left: 11px;
+    color: #f9da5a;
+
+}
+.footer .footermenu{
+    position: absolute;
+    right: 20px;
+    top: 40px;
+    white-space: nowrap;
+    color: #ffffff;
+}
+.footer .footermenu .menu-list{
+
+    list-style: none;
+}
+.footer .footermenu .menu-item {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 16px;
+}
+.footer .footermenu .menu-item::before{
+    content: '|';
+    position: absolute;
+    left: -12px;
+    top: 0;
+}
+.footer .footermenu .menu-item:first-child::before{
+    display: none;
+}
+
